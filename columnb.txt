@@ -1,0 +1,164 @@
+2B) IMPLEMENT DIFFERENT LAYOUT STRUCTURES USING ROW, COLUMN, AND 
+STACK WIDGETS 
+Row Widget : 
+import 'package:flutter/material.dart';  
+void main() { runApp(MyApp()); }  
+class MyApp extends StatelessWidget {  
+@override  
+Widget build(BuildContext context) {  
+return MaterialApp(  
+home: MyHomePage()  
+);  
+}  
+}  
+class MyHomePage extends StatefulWidget {  
+@override  
+_MyHomePageState createState() => _MyHomePageState(); 
+}  
+class _MyHomePageState extends State<MyHomePage> {  
+@override  
+Widget build(BuildContext context) {  
+return Scaffold(  
+appBar: AppBar(  
+title: Text("Flutter Row Example"),  
+),  
+body: Row(  
+mainAxisAlignment: MainAxisAlignment.spaceEvenly,  
+children:<Widget>[  
+Container(  
+margin: EdgeInsets.all(12.0),  
+padding: EdgeInsets.all(8.0),  
+decoration:BoxDecoration(  
+borderRadius:BorderRadius.circular(8),  
+color:Colors.green  
+),  
+child: 
+Text("React.js",style: TextStyle(color:Colors.yellowAccent,fontSize:25),),  
+),  
+Container(  
+margin: EdgeInsets.all(15.0), 
+padding: EdgeInsets.all(8.0),  
+decoration:BoxDecoration(  
+borderRadius:BorderRadius.circular(8),  
+color:Colors.green  
+),  
+child: Text("Flutter",style: 
+TextStyle(color:Colors.yellowAccent,fontSize:25),),  
+),  
+Container(  
+margin: EdgeInsets.all(12.0),  
+padding: EdgeInsets.all(8.0),  
+decoration:BoxDecoration(  
+borderRadius:BorderRadius.circular(8),  
+color:Colors.green  
+),  
+child: Text("MySQL",style: 
+TextStyle(color:Colors.yellowAccent,fontSize:25),),  
+)  
+]  
+),  
+);  
+}  
+} 
+
+Column Widget: 
+import 'package:flutter/material.dart';  
+void main() { runApp(MyApp()); }  
+class MyApp extends StatelessWidget {  
+@override  
+Widget build(BuildContext context) {  
+return MaterialApp(  
+home: MyHomePage()  
+);  
+}  
+}  
+class MyHomePage extends StatefulWidget {  
+@override  
+_MyHomePageState createState() => _MyHomePageState();  
+}  
+class _MyHomePageState extends State<MyHomePage> {  
+@override  
+Widget build(BuildContext context) { 
+return Scaffold(  
+appBar: AppBar(  
+title: Text("Flutter Column Example"),  
+),  
+body: Column(  
+mainAxisAlignment: MainAxisAlignment.spaceBetween,  
+children:<Widget>[  
+Container(  
+margin: EdgeInsets.all(20.0),  
+padding: EdgeInsets.all(12.0),  
+decoration:BoxDecoration(  
+borderRadius:BorderRadius.circular(8),  
+color:Colors.red  
+),  
+child: Text("React.js",style: 
+TextStyle(color:Colors.yellowAccent,fontSize:20),),  
+),  
+Container(  
+margin: EdgeInsets.all(20.0),  
+padding: EdgeInsets.all(12.0),  
+decoration:BoxDecoration(  
+borderRadius:BorderRadius.circular(8),  
+color:Colors.red  
+),  
+child: Text("Flutter",style: 
+TextStyle(color:Colors.yellowAccent,fontSize:20),),  
+),  
+Container(  
+margin: EdgeInsets.all(20.0),  
+padding: EdgeInsets.all(12.0),  
+decoration:BoxDecoration(  
+borderRadius:BorderRadius.circular(8),  
+color:Colors.red  
+),  
+child: Text("MySQL",style: 
+TextStyle(color:Colors.yellowAccent,fontSize:20),),  
+)  
+]  
+),  
+);  
+}  
+}
+
+Stack Widget: 
+import 'package:flutter/material.dart'; 
+void main() { 
+runApp(MaterialApp( 
+home: Scaffold( 
+appBar: AppBar( 
+title: Text('GeeksforGeeks'), 
+backgroundColor: Colors.greenAccent[400], 
+), //AppBar 
+body: Center( 
+child: SizedBox( 
+width: 300, 
+height: 300, 
+child: Center( 
+child: Stack( 
+children: <Widget>[ 
+Container( 
+width: 300, 
+height: 300, 
+color: Colors.red, 
+), //Container 
+Container( 
+width: 250, 
+height: 250, 
+color: Colors.black, 
+), //Container 
+Container( 
+height: 200, 
+width: 200, 
+color: Colors.purple, 
+), //Container 
+], //<Widget>[] 
+), //Stack 
+), //Center 
+), //SizedBox 
+) //Center 
+) //Scaffold 
+) //MaterialApp 
+); 
+} 
